@@ -2,13 +2,13 @@
 
 > Hackathon Nicaragua 2026 | Categoría: Avanzado | Temática: Turismo
 
-Este documento establece las reglas de colaboración para todo el equipo. Su cumplimiento es **obligatorio** y será evaluado por los mentores como parte del criterio de "Control de versiones" (30% Desarrollo).
+Este documento establece las reglas de colaboración para el equipo.
 
 ---
 
 ## 1. Flujo de Ramas 
 
-Utilizamos una versión simplificada de Git Flow, adaptada al ritmo de un hackathon. No usamos ramas `release/` ni `hotfix/` porque el ciclo de vida del proyecto es corto y los sprints son semanales.
+Utilizamos una versión simplificada de Git Flow, adaptada al ritmo de un hackathon. No usamos ramas `release/` ni `hotfix/` porque el ciclo de vida del proyecto es corto.
 
 ### Ramas permanentes
 
@@ -21,18 +21,18 @@ Utilizamos una versión simplificada de Git Flow, adaptada al ritmo de un hackat
 
 | Prefijo | Cuándo usarla | Ejemplo |
 |---------|---------------|---------|
-| `feature/` | Nueva funcionalidad | `feature/guide-certification-upload` |
+| `feature/` | Nueva funcionalidad | `feature/file-upload` |
 | `fix/` | Corrección de un bug | `fix/login-null-pointer` |
 | `docs/` | Cambios solo en documentación | `docs/update-er-diagram-3fn` |
-| `chore/` | Configuración, dependencias, CI/CD | `chore/setup-laravel-sail` |
-| `test/` | Pruebas automatizadas | `test/api-guide-endpoints` |
+| `chore/` | Configuración, dependencias, CI/CD | `chore/setup-jenkins` |
+| `test/` | Pruebas automatizadas | `test/api-endpoints` |
 
 ### Reglas de nomenclatura
 
 - Todo en **minúsculas** y separado por **guiones**.
 - Máximo 4-5 palabras descriptivas.
 - **No**: `feature/ArreglandoCosasDelBackend`
-- **Si**: `feature/guide-role-validation`
+- **Si**: `feature/role-validation`
 
 ---
 
@@ -76,7 +76,7 @@ Cada commit debe seguir **estrictamente** este formato:
 - test(backend): add feature test for admin role approval workflow
 - refactor(backend): move payment mock logic to service layer
 
-### ❌ Commits que NO se aceptan
+### Commits que NO se aceptan
 
 - update
 - arreglando cosas
@@ -85,6 +85,7 @@ Cada commit debe seguir **estrictamente** este formato:
 - mejorar estilo
 - fix
 - .
+- xd
 
 ## 3. Pull Requests (PRs)
 
@@ -93,8 +94,7 @@ Cada commit debe seguir **estrictamente** este formato:
 1. **Nunca** hagas push directo a `main` ni a `develop`. Todo pasa por PR.
 2. Cada PR debe tener **al menos 1 aprobación** de otro miembro del equipo.
 3. Todos los comentarios de revisión deben marcarse como **"Resolved"** antes de hacer merge.
-4. El PR debe estar vinculado a una **tarjeta de Trello**.
-5. Si el PR incluye cambios visuales (Livewire o Flutter), adjunta **capturas de pantalla**.
+4. Si el PR incluye cambios visuales (Livewire o Flutter), adjunta **capturas de pantalla**.
 
 ### Plantilla de Pull Request
 
@@ -134,9 +134,9 @@ git checkout -b feature/guide-certification-upload
 
 ### 4. Haz commits siguiendo Conventional Commits
 1. git add .
-2. git commit -m "feat(backend): add INTUR certificate upload endpoint"
-3. git commit -m "feat(db): create guide_certifications migration"
-4. git commit -m "test(backend): add feature test for certificate validation"
+2. git commit -m "feat(backend): añadir endpoints para subida de certificados INTUR"
+3. git commit -m "feat(db): crear migracion guide_certifications"
+4. git commit -m "test(backend): añadir feature para aprobacion de certificados"
 
 ### 5. Sube tu rama al repositorio remoto
 git push origin feature/guide-certification-upload
